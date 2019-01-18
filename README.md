@@ -82,8 +82,8 @@ Two different instances of ArrayList are "equal" when it's values are similar.
 
 ## Take Exam
 
-<https://education.oracle.com/java*se*8*programmer*i/pexam_1Z0*808>
+<https://education.oracle.com/java-se-8-programmer-i/pexam_1Z0-808>
 
 Source  | Data
-************* | *************
-Exam Simulation(pt*br)  | <https://www.udemy.com/metodologia*de*certificacao*java*8*oca*simulados/learn/v4/overview>
+------------- | -------------
+Exam Simulation(pt-br)  | <https://www.udemy.com/metodologia-de-certificacao-java-8-oca-simulados/learn/v4/overview>
