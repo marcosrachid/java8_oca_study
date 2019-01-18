@@ -80,10 +80,7 @@ java.time package Classes are imutable
 
 Two different instances of ArrayList are "equal" when it's values are similar.
 
-## Take Exam
-
-<https://education.oracle.com/java-se-8-programmer-i/pexam_1Z0-808>
-
 Source  | Data
 ------------- | -------------
+Take Exam  | <https://education.oracle.com/java-se-8-programmer-i/pexam_1Z0-808>
 Exam Simulation(pt-br)  | <https://www.udemy.com/metodologia-de-certificacao-java-8-oca-simulados/learn/v4/overview>
