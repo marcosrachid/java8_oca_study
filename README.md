@@ -344,6 +344,41 @@ java.time package Classes are imutable
 
 Period treats only days, weeks, months and years
 
+LocalDate important methods:
+
+* atTime: LocalDateTime
+* format: String
+* getDayOfMonth: int
+* getDayOfWeek: DayOfWeek
+* getDayOfYear: int
+* getMonth: Month
+* getMonthValue: int (1-12)
+* getYear: int
+* minus: LocalDate
+* minusDays: LocalDate
+* minusMonths: LocalDate
+* minusWeeks: LocalDate
+* minusYears: LocalDate
+* now: static LocalDate
+* of: static LocalDate
+* plus: LocalDate
+* plusDays: LocalDate
+* plusMonths: LocalDate
+* plusWeeks: LocalDate
+* plusYears: LocalDate
+
+LocalTime important methods:
+
+*
+
+LocalDateTime important methods:
+
+*
+
+Period important methods:
+
+*
+
 Two different instances of ArrayList are "equal" when its contents are similar.
 
 lambda is important to define deferred executions for functional interfaces.
