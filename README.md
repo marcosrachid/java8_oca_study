@@ -24,6 +24,28 @@ Switch statement can only use:
 * ++i/--i: increments or decrements and return new value
 * i++/i--: increments or decrements and return original value
 
+Precedence table:
+
+Precedence  |  Operator |  Associativity
+-------------  |  -------------  |  -------------
+15  |  (), [], .  |  Left to Right
+14  |  i++, i--  |  Right to Left
+13  |  ++i, --i, +(unary), -(unary), !(unary), ~(unary), (cast)(unary)  |  Right to Left
+12  |  *, /, %  |  Left to Right
+11  |  +, -  |  Left to Right
+10  |  <<, >>, >>>  |  Left to Right
+9  |  <, <=, >, >=, instanceof  |  Left to Right
+8  |  ==, !=  |  Left to Right
+7  |  &  |  Left to Right
+6  |  ^  |  Left to Right
+5  |  "|"  |  Left to Right
+4  |  &&  |  Left to Right
+3  |  ||  |  Left to Right
+2  |  ? :(ternary)  |  Right to Left
+1  |  =, +=, -=, +=, /=, %=  |  Right to Left
+
+Larger number means higher precedence.
+
 ## Creating and Using Arrays 
 
 When trying to access an inexistence index, it will throw an "ArrayIndexOutOfBoundsException".
