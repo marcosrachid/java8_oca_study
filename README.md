@@ -170,6 +170,8 @@ do-while: do A while(B), being A the loop logic execution, it will run at least 
 
 for-each: for (A) B, being A specific "for-each" statement that sets a non Collection or non array value to be treated in B execution, from a Collection or array value.
 
+The conditionals within the loops, cannot be set to be constant true, it must have a way to break or at least make it unclear if the loop will be infinite or not.
+
 ## Working with Methods and Encapsulation 
 
 modifiers(from most acess to least):
@@ -187,7 +189,9 @@ A class that defines a static method with the same signature as a static method 
 
 Java does not support multiple inheritance for classes, only for interfaces.
 
-Methods from interface are implicit "public" except for "default" and "static" methods.
+Methods from interface are implicit "public".
+
+"final", "static" and any other access modifier besides "public" cannot be declared on an abstract method.
 
 if two different interfaces has the same static or default method(dispite de implementation), the class implementing both, must implement a new method default or static.
 
@@ -230,12 +234,35 @@ Important unchecked exceptions: NullPointerException, ArrayIndexOutOfBound, Ille
 
 Important Error's: StackOverflowError, OutOfMemoryError
 
-The "catch" statements must always be orderer from least wide to most. 
+The "catch" statements must always be orderer from least wide to most broader. 
 Ex:
 ```
 try {
 } catch (Runtime re) {
 } catch (Exception e) {
+}
+```
+
+The order of statements:
+
+* 1 - try: must have one.
+* 2 - catch: zero or n, not necessary if a finally is present.
+* 3 - finally: zero or one, not necessary if a catch is present.
+
+The try statement must have try keyword, but it's not mandatory a catch or a finally, but it's necessary one of them at least.
+
+The finally block will always run, except if the program forcebly exits on try or catch.
+
+Thought the finally is the last block to run, on the following method, the finally exception is the one to be catch on method call:
+```
+public void fix() throws Exception {
+	try {
+		throw new RuntimeException("Found error");
+	} catch (RuntimeException e) {
+		throw new ArrayIndexOutOfBoundsException("Found catch error");
+	} finally {
+		throw new IllegalArgumentException("Found another error");
+	}
 }
 ```
 
