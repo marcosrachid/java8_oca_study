@@ -65,7 +65,8 @@ double  |  short
 double  |  int
 double  |  long
 double  |  float
-Object  |  covariant
+Object  |  any class
+Created Object  |  covariants
 
 Garbage Collection cannot be forced to run, althought it has the method "System.gc()", it cannot force JVM to do the Garbage Collection.
 
