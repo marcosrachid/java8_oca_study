@@ -6,7 +6,70 @@ Tips for OCA exam
 
 main structure: public static (final) void main([any String array declaration, like String[] args or String args[] or String... args])
 
+Java is pass-by-value, which means methods cannot change value from passed arguments, only the Object state.
+
 ## Working With Java Data Types 
+
+A byte/short/int/long instance variable is always initialized with 0 value.
+
+A float/double instance variable is always initialized with 0.0 value.
+
+A char instance variable is always initialized with '' value.
+
+A boolean instance variable is always initialized with false value.
+
+Possible numeric types declaration:
+
+* double v = 1234567;
+* double v = 1_234_567;
+* double v = 1234567.00;
+* double v = 1_234_567.00;
+* double v = 1234567d;
+* double v = 1_234_567d;
+* double v = 1234567.00d;
+* double v = 1_234_567.00d;
+* double v = 1234567D;
+* double v = 1_234_567D;
+* double v = 1234567.00D;
+* double v = 1_234_567.00D;
+* float v = 1_234.00f;
+* float v = 1_234.00F;
+* long v = 1234567l;
+* long v = 1234567L;
+
+implicit cast list:
+
+Reference  |  Value
+-------------  |  -------------
+char  |  byte
+char  |  short
+char  |  int
+byte  |  char
+short  |  char
+short  |  byte
+int  |  char
+int  |  byte
+int  |  short
+long  |  char
+long  |  byte
+long  |  short
+long  |  int
+float  |  char
+float  |  byte
+float  |  short
+float  |  int
+float  |  long
+double  |  char
+double  |  byte
+double  |  short
+double  |  int
+double  |  long
+double  |  float
+Object  |  covariant
+
+Garbage Collection cannot be forced to run, althought it has the method "System.gc()", it cannot force JVM to do the Garbage Collection.
+
+Objects are elegible for Garbage Collection when they have no reference to an object from heap.
 
 ## Using Operators and Decision Constructs 
 
@@ -54,9 +117,22 @@ When trying to access an inexistence index, it will throw an "ArrayIndexOutOfBou
 
 ## Working with Methods and Encapsulation 
 
+modifiers(from most acess to least):
+
+* public: any class has access to it.
+* protected: any class within the same package and child class from the protected member class can access it.
+* default or package-private: any class within the same package can access it.
+* private: only the member owner can access it.
+
 All methods in java are pass-by-value which means that the value passed as argument on a method won't change its value. But an object atributes can be changed like arrays and Collections.
 
+static member are related directly to the class and not to the instance, but it can be accessed from instance.
+
+A static method cannot access instance variables, but instance methods can access static variables.
+
 ## Working with Inheritance 
+
+Inheritance is important due developers can minimize code duplicity.
 
 A class that defines an instance variable with the same name as an instance variable from its parent class is referenced as "hidden".
 
@@ -78,6 +154,10 @@ try {
 ## Working with Selected classes from the Java API 
 
 String is imutable and StringBuilder is mutable
+
+String a = "somehting"; firstly search on the String pool for an existing String, if found it returns the older instance, otherwise it will create a new one.
+
+String b = new String("something"); will always create a new instance.
 
 String important methods: 
 
