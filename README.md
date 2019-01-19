@@ -84,7 +84,7 @@ boolean  |  Boolean
 bytes/bits: 
 
 Primitive  |  bytes  |  bits
--------------  |  -------------
+-------------  |  -------------  |  -------------
 byte  |  1  |  8
 short  |  2  |  16
 char  |  2  |  16
