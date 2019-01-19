@@ -216,10 +216,6 @@ modifiers(from most acess to least):
 
 ## Working with Inheritance 
 
-A class that defines an instance variable with the same name as an instance variable from its parent class is referenced as "hidden".
-
-A class that defines a static method with the same signature as a static method from its parent is referenced as "hidden".
-
 Java does not support multiple inheritance for classes, only for interfaces.
 
 Methods from interface are implicit "public".
@@ -250,6 +246,10 @@ Overriden method rules:
 * Abstract methods must be overridden by the first concrete (non-abstract) subclass.
 * final methods cannot be overridden.
 * A subclass can use super.overridden_method() to call the superclass version of an overridden method.
+
+A class that defines an instance variable with the same name as an instance variable from its parent class is referenced as "hidden".
+
+A class that defines a static method with the same signature as a static method from its parent is referenced as "hidden".
 
 ## Handling Exceptions 
 
@@ -386,4 +386,5 @@ lambda is important to define deferred executions for functional interfaces.
 Source  | Data
 ------------- | -------------
 Take Exam  | <https://education.oracle.com/java-se-8-programmer-i/pexam_1Z0-808>
+Java Exam Classes  |  <not yet>
 Exam Simulation(pt-br)  | <https://www.udemy.com/metodologia-de-certificacao-java-8-oca-simulados/learn/v4/overview>
