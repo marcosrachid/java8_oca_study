@@ -114,7 +114,19 @@ Larger number means higher precedence.
 
 When trying to access an inexistence index, it will throw an "ArrayIndexOutOfBoundsException".
 
+arrays in java are objects.
+
+to print array structure you need "Arrays.toString()", otherwise will print a generic object String.
+
 ## Using Loop Constructs 
+
+while structre: while(A) B, being A a boolean return condition, B will be ran only if condition A is true.
+
+for structure: for(A;B;C) D, being A a initialization statement, ran before every statement.B is the conditional statement that needs a boolean return, ran after A. C is the update statement, but it's not ran before the first loop, it mean D runs before C. D is ran only if condition B is true.
+
+do-while: do A while(B), being A the loop logic execution, it will run at least one time. B is the conditional statement that needs a boolean return, ran after B and validates if the execution will run again or not.
+
+for-each: for (A) B, being A specific "for-each" statement that sets a non Collection or non array value to be treated in B execution, from a Collection or array value.
 
 ## Working with Methods and Encapsulation 
 
@@ -142,6 +154,8 @@ A class that defines a static method with the same signature as a static method 
 Methods from interface are implicit "public" except for "default" and "static" methods.
 
 ## Handling Exceptions 
+
+![Throwable structure](http://journals.ecs.soton.ac.uk/java/tutorial/java/exceptions/images/throwableHierarchy_trans.gif)
 
 The "catch" statements must always be orderer from least wide to most. 
 Ex:
