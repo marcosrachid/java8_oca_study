@@ -6,9 +6,11 @@ Tips for OCA exam
 
 main structure: public static (final) void main([any String array declaration, like String[] args or String args[] or String... args])
 
-Java is pass-by-value, which means methods cannot change value from passed arguments, only the Object state.
+package "java.lang" is imported implicity in every java class.
 
-## Working With Java Data Types 
+java identifiers are used in classes, methods and variables and its rule is ([A-Za-z]|_|$)+(([A-Za-z]|[0-9]|_|$)*. Identifier cannot take keywords.
+
+Java is pass-by-value, which means methods cannot change value from passed arguments, only the Object state.
 
 A byte/short/int/long instance variable is always initialized with 0 value.
 
@@ -17,6 +19,18 @@ A float/double instance variable is always initialized with 0.0 value.
 A char instance variable is always initialized with '' value.
 
 A boolean instance variable is always initialized with false value.
+
+a package import with "*" is not recursive, it means the import with * will import all classes from the specified package and not the subsequent package folders.
+
+Inheritance is important due developers can minimize code duplicity.
+
+All methods in java are pass-by-value which means that the value passed as argument on a method won't change its value. But an object atributes can be changed like arrays and Collections.
+
+static member are related directly to the class and not to the instance, but it can be accessed from instance.
+
+A static method cannot access instance variables, but instance methods can access static variables.
+
+## Working With Java Data Types 
 
 Possible numeric types declaration:
 
@@ -76,7 +90,7 @@ byte  |  Byte
 short  |  Short
 char  |  Character
 int  |  Integer
-Long  |  Long
+long  |  Long
 float  |  Float
 double  |  Double
 boolean  |  Boolean
@@ -89,7 +103,7 @@ byte  |  1  |  8
 short  |  2  |  16
 char  |  2  |  16
 int  |  3  |  32
-Long  |  4  |  64
+long  |  4  |  64
 float  |  3  |  32
 double  |  4  |  64
 boolean  |  -  |  1
@@ -138,6 +152,8 @@ Larger number means higher precedence.
 
 ## Creating and Using Arrays 
 
+array index begin in 0 and goes until its length - 1.
+
 When trying to access an inexistence index, it will throw an "ArrayIndexOutOfBoundsException".
 
 arrays in java are objects.
@@ -163,21 +179,40 @@ modifiers(from most acess to least):
 * default or package-private: any class within the same package can access it.
 * private: only the member owner can access it.
 
-All methods in java are pass-by-value which means that the value passed as argument on a method won't change its value. But an object atributes can be changed like arrays and Collections.
-
-static member are related directly to the class and not to the instance, but it can be accessed from instance.
-
-A static method cannot access instance variables, but instance methods can access static variables.
-
 ## Working with Inheritance 
-
-Inheritance is important due developers can minimize code duplicity.
 
 A class that defines an instance variable with the same name as an instance variable from its parent class is referenced as "hidden".
 
 A class that defines a static method with the same signature as a static method from its parent is referenced as "hidden".
 
+Java does not support multiple inheritance for classes, only for interfaces.
+
 Methods from interface are implicit "public" except for "default" and "static" methods.
+
+if two different interfaces has the same static or default method(dispite de implementation), the class implementing both, must implement a new method default or static.
+
+Concrete classes must implement all abstract classes from its parent.
+
+Overloaded methods rules:
+
+* methods must have the same name.
+* methods must have different argument list.
+* method can or cannot have different return types.
+* method can or cannot have a different access modifier.
+* method can or cannot have a different checked or unchecked exception.
+
+Overriden method rules:
+
+* methods must have the same name.
+* methods must have the same arguments.
+* methods must have the same return type or its covariants. 
+* methods must not resctrict more the access, but can change to a broader access modifier(if parent --> protected then child --> private is not allowed)(if parent --> protected then child --> public is allowed).
+* methods must not throw new or broader exception but can remove(if parent --> throws RuntimeException --> child throws Exception is not allowed)(if parent --> throws RuntimeException --> child does not throw nothing is allowed).
+* only inherited methods can be overriden.
+* Constructors and private methods are not inherited, so they cannot be overridden.
+* Abstract methods must be overridden by the first concrete (non-abstract) subclass.
+* final methods cannot be overridden.
+* A subclass can use super.overridden_method() to call the superclass version of an overridden method.
 
 ## Handling Exceptions 
 
