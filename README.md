@@ -19,6 +19,11 @@ Switch statement can only use:
 * String
 * enum
 
+++i/--i and i++/i-- diff:
+
+* ++i/--i: increments or decrements and return new value
+* i++/i--: increments or decrements and return original value
+
 ## Creating and Using Arrays 
 
 When trying to access an inexistence index, it will throw an "ArrayIndexOutOfBoundsException".
@@ -38,6 +43,15 @@ A class that defines a static method with the same signature as a static method 
 Methods from interface are implicit "public" except for "default" and "static" methods.
 
 ## Handling Exceptions 
+
+The "catch" statements must always be orderer from least wide to most. 
+Ex:
+```
+try {
+} catch (Runtime re) {
+} catch (Exception e) {
+}
+```
 
 ## Working with Selected classes from the Java API 
 
