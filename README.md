@@ -386,5 +386,7 @@ lambda is important to define deferred executions for functional interfaces.
 Source  | Data
 ------------- | -------------
 Take Exam  | <https://education.oracle.com/java-se-8-programmer-i/pexam_1Z0-808>
-Java Exam Classes  |  <not yet>
+Java Exam Classes(en)  |  <not yet>
+Java Exam Classes(pt-br)  |  <not yet>
+Exam Simulation(en)  | <https://www.udemy.com/metodologia-de-certificacao-java-8-oca-simulados/learn/v4/overview>
 Exam Simulation(pt-br)  | <https://www.udemy.com/metodologia-de-certificacao-java-8-oca-simulados/learn/v4/overview>
