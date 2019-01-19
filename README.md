@@ -32,6 +32,8 @@ A static method cannot access instance variables, but instance methods can acces
 
 ## Working With Java Data Types 
 
+Primitives cannot be null.
+
 Possible numeric types declaration:
 
 * double v = 1234567;
@@ -152,6 +154,27 @@ Larger number means higher precedence.
 
 ## Creating and Using Arrays 
 
+Types of array declarations:
+
+* int[] myIntArray = new int[3];
+* int[] myIntArray = {1,2,3};
+* int[] myIntArray = new int[]{1,2,3};
+
+Ways of declare simple arrays:
+
+* int[] myIntArray = new int[3];
+* int myIntArray[] = new int[3];
+
+Ways to declare simple matrix:
+
+* int[][] myIntArray = new int[3][3];
+* int[] myIntArray[] = new int[3][3];
+* int myIntArray[][] = new int[3][3];
+
+Arrays are objects, not primitives.
+
+For example "new int[3]" will set three ([0, 0, 0]) and "new String[3]" will set three null([null, null, null]).
+
 array index begin in 0 and goes until its length - 1.
 
 When trying to access an inexistence index, it will throw an "ArrayIndexOutOfBoundsException".
@@ -159,6 +182,16 @@ When trying to access an inexistence index, it will throw an "ArrayIndexOutOfBou
 arrays in java are objects.
 
 to print array structure you need "Arrays.toString()", otherwise will print a generic object String.
+
+Arrays important methods:
+
+* sort: Sorts the specified range of the specified array of objects/types into ascending order, according to the natural ordering of its elements
+* binarySearch: Searches a key within an array, the array must be sorted before or be already sorted to return a valid index.
+* asList: transforms an array into a List. Transformed List with asList cannot add new values to the list.
+
+varargs are types defined with "..." after it, it's only usable as the last argument from a method.
+
+varargs can be overriden or override an array, thought it throws a warning.
 
 ## Using Loop Constructs 
 
@@ -305,11 +338,15 @@ StringBuilder important methods:
 * reverse: StringBuilder
 * substring: String
 
-package java.time: LocalDate, LocalTime, LocalDateTime
+package java.time: LocalDate, LocalTime, LocalDateTime, Period
 
 java.time package Classes are imutable
 
-Two different instances of ArrayList are "equal" when it's values are similar.
+Period treats only days, weeks, months and years
+
+Two different instances of ArrayList are "equal" when its contents are similar.
+
+lambda is important to define deferred executions for functional interfaces.
 
 Source  | Data
 ------------- | -------------
