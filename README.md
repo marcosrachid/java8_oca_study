@@ -68,6 +68,32 @@ double  |  float
 Object  |  any class
 Created Object  |  covariants
 
+Wrapper table:
+
+Primitive  |  Wrapper
+-------------  |  -------------
+byte  |  Byte
+short  |  Short
+char  |  Character
+int  |  Integer
+Long  |  Long
+float  |  Float
+double  |  Double
+boolean  |  Boolean
+
+bytes/bits: 
+
+Primitive  |  bytes  |  bits
+-------------  |  -------------
+byte  |  1  |  8
+short  |  2  |  16
+char  |  2  |  16
+int  |  3  |  32
+Long  |  4  |  64
+float  |  3  |  32
+double  |  4  |  64
+boolean  |  -  |  1
+
 Garbage Collection cannot be forced to run, althought it has the method "System.gc()", it cannot force JVM to do the Garbage Collection.
 
 Objects are elegible for Garbage Collection when they have no reference to an object from heap.
@@ -156,6 +182,18 @@ Methods from interface are implicit "public" except for "default" and "static" m
 ## Handling Exceptions 
 
 ![Throwable structure](http://journals.ecs.soton.ac.uk/java/tutorial/java/exceptions/images/throwableHierarchy_trans.gif)
+
+Error's should not be declared or catch.
+
+Exception and its covariants(except for RuntimeException and its covariants) are checked exceptions, and must be declared to method and/or catch within a try-catch statement.
+
+RuntimeException and its covariants are unchecked exception, and can or cannot be declared to method and/or catch within a try-catch statement.
+
+Important checked exceptions: IOException, FileNotFoundException, SQLException, DataAccessException
+
+Important unchecked exceptions: NullPointerException, ArrayIndexOutOfBound, IllegalArgumentException, IllegalStateException, ClassCastException, ArithmeticException, NumberFormatException
+
+Important Error's: StackOverflowError, OutOfMemoryError
 
 The "catch" statements must always be orderer from least wide to most. 
 Ex:
