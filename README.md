@@ -4,6 +4,18 @@ Tips for OCA exam
 
 ## Java Basics
 
+".java" files are code files to be compiled.
+
+".class" files are bytecodes generated from compiling a java code.
+
+classes variable are static variable attached to the class and shared between every instance.
+
+instance variables are a state variable attached to an instance. They has a default value from the start.
+
+local variables are method variables within a method, they must be initialized, since they don't have a implicit starting value.
+
+local variables can be final.
+
 main structure: public static (final) void main([any String array declaration, like String[] args or String args[] or String... args])
 
 package "java.lang" is imported implicity in every java class.
@@ -35,6 +47,10 @@ All methods in java are pass-by-value which means that the value passed as argum
 static member are related directly to the class and not to the instance, but it can be accessed from instance.
 
 A static method cannot access instance variables, but instance methods can access static variables.
+
+Garbage Collection cannot be forced to run, althought it has the method "System.gc()", it cannot force JVM to do the Garbage Collection.
+
+Objects are elegible for Garbage Collection when they have no reference to an object from heap.
 
 ## Working With Java Data Types 
 
@@ -117,10 +133,6 @@ long  |  4  |  64
 float  |  3  |  32
 double  |  4  |  64
 boolean  |  -  |  1
-
-Garbage Collection cannot be forced to run, althought it has the method "System.gc()", it cannot force JVM to do the Garbage Collection.
-
-Objects are elegible for Garbage Collection when they have no reference to an object from heap.
 
 Multiple declarations are possible separating variables with ",". Ex:
 ```
