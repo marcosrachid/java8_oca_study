@@ -24,6 +24,8 @@ A char instance variable is always initialized with '' value.
 
 A boolean instance variable is always initialized with false value.
 
+Any object instance variable is always initialized with null.
+
 a package import with "*" is not recursive, it means the import with * will import all classes from the specified package and not the subsequent package folders.
 
 Inheritance is important due developers can minimize code duplicity.
@@ -37,6 +39,8 @@ A static method cannot access instance variables, but instance methods can acces
 ## Working With Java Data Types 
 
 Primitives cannot be null.
+
+Primitives will always start with lower case.
 
 Possible numeric types declaration:
 
@@ -171,6 +175,22 @@ int a = x + y; // sum of byte or short return int
 ```
 
 The difference between & and &&/&#124; and &#124;&#124; are that &&/&#124;&#124; will validate only the left part of operation if the condition is already satisfied, and &/&#124; will mandatory validate both sides.
+
+Ternary statement structure starts with a conditional expression and has the return from "true" case and return from "false" case. Ex:
+```
+(a > 5) ? "" : new Long(3)
+```
+
+If a variable is to receive a ternary statement, the cases must be covariant to be able to implicit cast to the reference. Ex:
+Possible:
+```
+double w = (true) ? 1 : 'a';
+```
+
+Impossible:
+```
+byte w = (true) ? 1 : 1.3;
+```
 
 ## Creating and Using Arrays 
 
