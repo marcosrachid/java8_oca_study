@@ -401,11 +401,65 @@ LocalTime important methods:
 
 LocalDateTime important methods:
 
-*
+* format: String
+* getDayOfMonth: int
+* getDayOfWeek: DayOfWeek
+* getDayOfYear: int
+* getMonth: Month
+* getMonthValue: int (1-12)
+* getHour: int
+* getMinute: int
+* getNano: int
+* getSecond: int
+* minus: LocalDateTime
+* minusDays: LocalDateTime
+* minusMonths: LocalDateTime
+* minusWeeks: LocalDateTime
+* minusYears: LocalDateTime
+* minusHours: LocalDateTime
+* minusMinutes: LocalDateTime
+* minusNanos: LocalDateTime
+* minusSeconds: LocalDateTime
+* now: static LocalDateTime
+* of: LocalDateTime
+* parse: LocalDateTime
+* plus: LocalDateTime
+* plusDays: LocalDateTime
+* plusMonths: LocalDateTime
+* plusWeeks: LocalDateTime
+* plusYears: LocalDateTime
+* plusHours: LocalDateTime
+* plusMinutes: LocalDateTime
+* plusNanos: LocalDateTime
+* plusSeconds: LocalDateTime
+* toLocalDate: LocalDate
+* toLocalTime: LocalTime
 
 Period important methods:
 
-*
+* between: static Period
+* from: static Period
+* getDays: int
+* getMonths: int
+* getYears: int
+* isNegative: boolean
+* isZero: boolean
+* minus: LocalDateTime
+* minusDays: LocalDateTime
+* minusMonths: LocalDateTime
+* minusYears: LocalDateTime
+* negated: Period
+* normalized: Period
+* of: static Period
+* ofDays: static Period	
+* ofMonths: static Period	
+* ofWeeks: static Period	
+* ofYears: static Period	
+* parse: static Period
+* plus: Period
+* plusDays: Period
+* plusMonths: Period
+* plusYears: Period	
 
 Two different instances of ArrayList are "equal" when its contents are similar.
 
