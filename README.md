@@ -144,9 +144,9 @@ Precedence  |  Operator |  Associativity
 8  |  ==, !=  |  Left to Right
 7  |  &  |  Left to Right
 6  |  ^  |  Left to Right
-5  |  "|"  |  Left to Right
+5  |  &#124;  |  Left to Right
 4  |  &&  |  Left to Right
-3  |  ||  |  Left to Right
+3  |  &#124;&#124;  |  Left to Right
 2  |  ? :(ternary)  |  Right to Left
 1  |  =, +=, -=, +=, /=, %=  |  Right to Left
 
