@@ -152,6 +152,14 @@ Precedence  |  Operator |  Associativity
 
 Larger number means higher precedence.
 
+The equation of two bytes or short, must return int. Ex:
+```
+byte x = 10, y = 2;
+int a = x + y; // sum of byte or short return int
+```
+
+The difference between & and &&/&#124; and &#124;&#124; are that &&/&#124;&#124; will validate only the left part of operation if the condition is already satisfied, and &/&#124; will mandatory validate both sides.
+
 ## Creating and Using Arrays 
 
 Types of array declarations:
@@ -369,7 +377,27 @@ LocalDate important methods:
 
 LocalTime important methods:
 
-*
+* atDate: LocalDateTime
+* format: String
+* getHour: int
+* getMinute: int
+* getNano: int
+* getSecond: int
+* minus: LocalTime
+* minusHours: LocalTime
+* minusMinutes: LocalTime
+* minusNanos: LocalTime
+* minusSeconds: LocalTime
+* now: static LocalTime
+* of: static LocalTime
+* ofNanoOfDay: static LocalTime
+* ofSecondOfDay: static LocalTime
+* parse: static LocalTime
+* plus: LocalTime
+* plusHours: LocalTime
+* plusMinutes: LocalTime
+* plusNanos: LocalTime
+* plusSeconds: LocalTime
 
 LocalDateTime important methods:
 
