@@ -10,6 +10,10 @@ package "java.lang" is imported implicity in every java class.
 
 java identifiers are used in classes, methods and variables and its rule is ([A-Za-z]|_|$)+(([A-Za-z]|[0-9]|_|$)*. Identifier cannot take keywords.
 
+The main methods will be only identified in public classes.
+
+methods must have its data type before the name, the other modifiers has no order.
+
 Java is pass-by-value, which means methods cannot change value from passed arguments, only the Object state.
 
 A byte/short/int/long instance variable is always initialized with 0 value.
@@ -114,6 +118,14 @@ Garbage Collection cannot be forced to run, althought it has the method "System.
 
 Objects are elegible for Garbage Collection when they have no reference to an object from heap.
 
+Multiple declarations are possible separating variables with ",". Ex:
+```
+String a = "variavel",  b = "variavel";
+String a = "variavel",  b;
+String a,  b = "variavel";
+String a,  b;
+```
+
 ## Using Operators and Decision Constructs 
 
 Switch statement can only use:
@@ -181,6 +193,8 @@ Ways to declare simple matrix:
 
 Arrays are objects, not primitives.
 
+The main argument, always has an array object, even if it is empty.
+
 For example "new int[3]" will set three ([0, 0, 0]) and "new String[3]" will set three null([null, null, null]).
 
 array index begin in 0 and goes until its length - 1.
@@ -222,6 +236,28 @@ modifiers(from most acess to least):
 * default or package-private: any class within the same package can access it.
 * private: only the member owner can access it.
 
+finals variables can only be set one time
+
+instance final variables cannot be set in methods.
+
+super() is the method to call parent class constructor.
+
+super() is mandatory within any constructor, in case of the parent constructor is a no argument constructor, it can be hidden in child constructor.
+
+super() is mandatory to be the first declaration within a constructor.
+
+static blocks and methods can only use external static variables.
+
+instance blocks and method can use external instance and static variable.
+
+Overloaded methods rules:
+
+* methods must have the same name.
+* methods must have different argument list.
+* method can or cannot have different return types.
+* method can or cannot have a different access modifier.
+* method can or cannot have a different checked or unchecked exception.
+
 ## Working with Inheritance 
 
 Java does not support multiple inheritance for classes, only for interfaces.
@@ -233,14 +269,6 @@ Methods from interface are implicit "public".
 if two different interfaces has the same static or default method(dispite de implementation), the class implementing both, must implement a new method default or static.
 
 Concrete classes must implement all abstract classes from its parent.
-
-Overloaded methods rules:
-
-* methods must have the same name.
-* methods must have different argument list.
-* method can or cannot have different return types.
-* method can or cannot have a different access modifier.
-* method can or cannot have a different checked or unchecked exception.
 
 Overriden method rules:
 
@@ -259,6 +287,10 @@ A class that defines an instance variable with the same name as an instance vari
 
 A class that defines a static method with the same signature as a static method from its parent is referenced as "hidden".
 
+Interface variables are constant, it means they are implicitly public static and final.
+
+abstract methods can be overriden.
+
 ## Handling Exceptions 
 
 ![Throwable structure](http://journals.ecs.soton.ac.uk/java/tutorial/java/exceptions/images/throwableHierarchy_trans.gif)
@@ -274,6 +306,8 @@ Important checked exceptions: IOException, FileNotFoundException, SQLException, 
 Important unchecked exceptions: NullPointerException, ArrayIndexOutOfBound, IllegalArgumentException, IllegalStateException, ClassCastException, ArithmeticException, NumberFormatException
 
 Important Error's: StackOverflowError, OutOfMemoryError
+
+Erros should never be used to catch.
 
 The "catch" statements must always be orderer from least wide to most broader. 
 Ex:
