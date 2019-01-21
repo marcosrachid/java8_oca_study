@@ -52,6 +52,8 @@ Garbage Collection cannot be forced to run, althought it has the method "System.
 
 Objects are elegible for Garbage Collection when they have no reference to an object from heap.
 
+Java is multi-platform, a binarycode compiled on Linux will run on Windows
+
 ## Working With Java Data Types 
 
 Primitives cannot be null.
