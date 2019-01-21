@@ -54,6 +54,20 @@ Objects are elegible for Garbage Collection when they have no reference to an ob
 
 Java is multi-platform, a binarycode compiled on Linux will run on Windows
 
+packages can or cannot be declared initially
+
+imports are not mandatory
+
+two imported classes with the same name, but from different packages, when simply referenced will cause compile error. Ex:
+```
+import java.util.*;
+import java.sql.*;
+public class DataManager {
+	private Date data1 = new Date(); // compile error
+	private java.util.Date data2 = new java.util.Date(); // right!
+}
+```
+
 ## Working With Java Data Types 
 
 Primitives cannot be null.
