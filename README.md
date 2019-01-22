@@ -249,7 +249,7 @@ array index begin in 0 and goes until its length - 1.
 
 When trying to access an inexistence index, it will throw an "ArrayIndexOutOfBoundsException".
 
-arrays in java are objects.
+arrays in java are objects, never primitives.
 
 to print array structure you need "Arrays.toString()", otherwise will print a generic object String.
 
@@ -262,6 +262,14 @@ Arrays important methods:
 varargs are types defined with "..." after it, it's only usable as the last argument from a method.
 
 varargs can be overriden or override an array, thought it throws a warning.
+
+attention with Arrays.sort() from String arrays with numeric values. Ex:
+```
+String[] n = new String[] { "1", "9", "10" };
+Arrays.sort(n); // order is "1", "10", "9"
+```
+
+The Arrays.binarySearch method when value is not found will return the negative value of the position it should be - 1.
 
 ## Using Loop Constructs 
 
