@@ -277,8 +277,6 @@ The conditionals within the loops, cannot be set to be constant true, it must ha
 
 for structure is "for(A;B;C) D", which the order of running from each statement is A, B, D, C, B, D, C, B, D...
 
-A is the initialization statement, B is the conditional statemente, C is the update statement, D is the execution statement.
-
 ## Working with Methods and Encapsulation 
 
 modifiers(from most acess to least):
