@@ -557,6 +557,59 @@ Two different instances of ArrayList are "equal" when its contents are similar.
 
 lambda is important to define deferred executions for functional interfaces.
 
+List important methods:
+
+* add: boolean
+* addAll: boolean
+* clear: void
+* contains: boolean
+* containsAll: boolean
+* get: E
+* indexOf: int
+* isEmpty: boolean
+* iterator: Iterator<E>
+* remove: E
+* removeAll: boolean
+* replaceAll: default void
+* set: E
+* size: int
+* sort: default void
+* toArray: T[]
+
+Set important methods:
+
+* add: boolean
+* addAll: boolean
+* clear: void
+* contains: boolean
+* containsAll: boolean
+* get: E
+* isEmpty: boolean
+* iterator: Iterator<E>
+* remove: E
+* removeAll: boolean
+* size: int
+* toArray: T[]
+
+Map important methods:
+
+* clear: void
+* containsKey: boolean
+* containsValue: boolean
+* entrySet: Set<Map.Entry<K,V>
+* forEach: void
+* get: V
+* getOrDefault: default V
+* isEmpty: boolean
+* keySet: Set<K>
+* put: V
+* putAll: void
+* remove: V
+* replace: default boolean
+* replaceAll: default void
+* size: int
+* values: Collection<V>
+
 Source  | Data
 ------------- | -------------
 Take Exam  | <https://education.oracle.com/java-se-8-programmer-i/pexam_1Z0-808>
