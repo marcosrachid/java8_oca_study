@@ -52,6 +52,10 @@ Garbage Collection cannot be forced to run, althought it has the method "System.
 
 Objects are elegible for Garbage Collection when they have no reference to an object from heap.
 
+The finalize method is called when an object is about to get garbage collected. That can be at any time after it has become eligible for garbage collection.
+
+finalize can be called zero or one time.
+
 Java is multi-platform, a binarycode compiled on Linux will run on Windows
 
 packages can or cannot be declared initially
@@ -307,6 +311,10 @@ super() is mandatory to be the first declaration within a constructor.
 static blocks and methods can only use external static variables.
 
 instance blocks and method can use external instance and static variable.
+
+static final variables must declare within a static context and final can be declared on an instance context.
+
+import static will only import static methods, not instance.
 
 Overloaded methods rules:
 
