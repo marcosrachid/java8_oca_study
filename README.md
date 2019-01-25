@@ -287,6 +287,10 @@ Arrays.sort(n); // order is "1", "10", "9"
 
 The Arrays.binarySearch method when value is not found will return the negative value of the position it should be - 1.
 
+length in arrays are public variables, not methods
+
+On Collections, to check it's size is used the method "size()".
+
 ## Using Loop Constructs 
 
 while structre: while(A) B, being A a boolean return condition, B will be ran only if condition A is true.
@@ -372,6 +376,12 @@ if two different interfaces has the same static or default method(dispite de imp
 
 Concrete classes must implement all abstract classes from its parent.
 
+When calling instance methods, it uses polymorphism to execute the implementation, which mean that the implementation used will be from the instance.
+
+When calling static methods, it uses the class implementation, which mean that the implementation used will be from the reference.
+
+Attributes are always from reference.
+
 Overriden method rules:
 
 * methods must have the same name.
@@ -442,6 +452,12 @@ public void fix() throws Exception {
 	}
 }
 ```
+
+Variables over consecutive catchs can have the same identifier.
+
+Variables from an inner catch cannot have the same identifier from the outer.
+
+The catch and finally must have "{}"
 
 ## Working with Selected classes from the Java API 
 
