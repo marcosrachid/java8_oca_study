@@ -312,6 +312,8 @@ super() is mandatory within any constructor, in case of the parent constructor i
 
 super() is mandatory to be the first declaration within a constructor.
 
+super keyword can call parent accessible attributes and methods.
+
 static blocks and methods can only use external static variables.
 
 instance blocks and method can use external instance and static variable.
@@ -319,6 +321,22 @@ instance blocks and method can use external instance and static variable.
 static final variables must declare within a static context and final can be declared on an instance context.
 
 import static will only import static methods, not instance.
+
+A setter on JavaBeans pattern must have a void return type, a prefix name as "set" and the first letter uppercase name of variable, with the argument of that variable and the assignment within the execution block.
+Ex:
+```
+public void setItem(Item item) {
+	this.item = item;
+}
+```
+
+A getter on JavaBeans pattern must have the return type from variable modifier, a prefix name as "get" and the first letter uppercase name of variable, no arguments and the return from the instance variable within the execution block.
+Ex:
+```
+public Item getItem() {
+	return this.item;
+}
+```
 
 Overloaded methods rules:
 
