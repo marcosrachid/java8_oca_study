@@ -302,6 +302,8 @@ modifiers(from most acess to least):
 * default or package-private: any class within the same package can access it.
 * private: only the member owner can access it.
 
+constructors does not have any return type.
+
 finals variables can only be set one time
 
 instance final variables cannot be set in methods.
