@@ -301,9 +301,9 @@ The conditionals within the loops, cannot be set to be constant true, it must ha
 
 for structure is "for(A;B;C) D", which the order of running from each statement is A, B, D, C, B, D, C, B, D...
 
-On for structure, the initialization statement separates its statements by ","
+On for structure, the initialization statement separates its statements by "," instead of ";"
 
-On for structure, the update statement separates its statements by ","
+On for structure, the update statement separates its statements by "," instead of ";"
 
 ## Working with Methods and Encapsulation 
 
