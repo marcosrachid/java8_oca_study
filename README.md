@@ -166,6 +166,12 @@ String a,  b = "variavel";
 String a,  b;
 ```
 
+Wrappers have a "parse" method and "valueOf" method, each one will return a primitive or the wrapper. Example is that "Integer.parseInt()" will return int type and "Integer.valueOf()" will return Integer.
+
+static variables can be used on instance and static methods.
+
+instance variables can be used on instance methods.
+
 ## Using Operators and Decision Constructs 
 
 Switch statement can only use:
@@ -227,6 +233,8 @@ Impossible:
 ```
 byte w = (true) ? 1 : 1.3;
 ```
+
+The "^" operator is an exclusive or, which means that will return true only in cases of "true ^ false" or "false ^ true".
 
 ## Creating and Using Arrays 
 
