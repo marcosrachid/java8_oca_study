@@ -8,6 +8,10 @@ Tips for OCA exam
 
 ".class" files are bytecodes generated from compiling a java code.
 
+java command can use "." to separate packages.
+
+javac receives a ".java" file to generate a ".class".
+
 classes variable are static variable attached to the class and shared between every instance.
 
 instance variables are a state variable attached to an instance. They has a default value from the start.
