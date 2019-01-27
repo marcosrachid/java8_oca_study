@@ -415,7 +415,7 @@ RuntimeException and its covariants are unchecked exception, and can or cannot b
 
 Important checked exceptions: IOException, FileNotFoundException, SQLException, DataAccessException
 
-Important unchecked exceptions: NullPointerException, ArrayIndexOutOfBound, IllegalArgumentException, IllegalStateException, ClassCastException, ArithmeticException, NumberFormatException
+Important unchecked exceptions: NullPointerException, NegativeArraySizeException, ArrayIndexOutOfBound, IllegalArgumentException, IllegalStateException, ClassCastException, ArithmeticException, NumberFormatException
 
 Important Error's: StackOverflowError, OutOfMemoryError
 
