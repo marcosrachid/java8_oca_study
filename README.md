@@ -425,7 +425,7 @@ The "catch" statements must always be orderer from least wide to most broader.
 Ex:
 ```
 try {
-} catch (Runtime re) {
+} catch (Runtime e) {
 } catch (Exception e) {
 }
 ```
