@@ -14,7 +14,7 @@ javac receives a ".java" file to generate a ".class".
 
 classes variable are static variable attached to the class and shared between every instance.
 
-instance variables are a state variable attached to an instance. They has a default value from the start.
+instance variables are a state variable attached to an instance. They have a default value from the start.
 
 local variables are method variables within a method, they must be initialized, since they don't have a implicit starting value.
 
@@ -22,13 +22,13 @@ local variables can be final.
 
 main structure: public static (final) void main([any String array declaration, like String[] args or String args[] or String... args])
 
-package "java.lang" is imported implicity in every java class.
+package "java.lang" is imported implicitly in every java class.
 
-java identifiers are used in classes, methods and variables and its rule is ([A-Za-z]|_|$)+(([A-Za-z]|[0-9]|_|$)*. Identifier cannot take keywords.
+java identifiers are used in classes, methods and variables and its rule is ([A-Za-z]|\_|$)+(([A-Za-z]|[0-9]|\_|$)*. Identifier cannot take keywords.
 
 The main methods will be only identified in public classes.
 
-methods must have its data type before the name, the other modifiers has no order.
+methods must have its data type before the name, the other modifiers have no order.
 
 Java is pass-by-value, which means methods cannot change value from passed arguments, only the Object state.
 
@@ -46,15 +46,15 @@ a package import with "*" is not recursive, it means the import with * will impo
 
 Inheritance is important due developers can minimize code duplicity.
 
-All methods in java are pass-by-value which means that the value passed as argument on a method won't change its value. But an object atributes can be changed like arrays and Collections.
+All methods in java are pass-by-value which means that the value passed as argument on a method won't change its value. But an object attributes can be changed like arrays and Collections.
 
 static member are related directly to the class and not to the instance, but it can be accessed from instance.
 
 A static method cannot access instance variables, but instance methods can access static variables.
 
-Garbage Collection cannot be forced to run, althought it has the method "System.gc()", it cannot force JVM to do the Garbage Collection.
+Garbage Collection cannot be forced to run, although it has the method "System.gc()", it cannot force JVM to do the Garbage Collection.
 
-Objects are elegible for Garbage Collection when they have no reference to an object from heap.
+Objects are eligible for Garbage Collection when they have no reference to an object from heap.
 
 The finalize method is called when an object is about to get garbage collected. That can be at any time after it has become eligible for garbage collection.
 
@@ -263,7 +263,7 @@ For example "new int[3]" will set three ([0, 0, 0]) and "new String[3]" will set
 
 array index begin in 0 and goes until its length - 1.
 
-When trying to access an inexistence index, it will throw an "ArrayIndexOutOfBoundsException".
+When trying to access an inexistent index, it will throw an "ArrayIndexOutOfBoundsException".
 
 arrays in java are objects, never primitives.
 
@@ -277,7 +277,7 @@ Arrays important methods:
 
 varargs are types defined with "..." after it, it's only usable as the last argument from a method.
 
-varargs can be overriden or override an array, thought it throws a warning.
+varargs can be overridden or override an array, thought it throws a warning.
 
 attention with Arrays.sort() from String arrays with numeric values. Ex:
 ```
@@ -289,11 +289,11 @@ The Arrays.binarySearch method when value is not found will return the negative 
 
 length in arrays are public variables, not methods
 
-On Collections, to check it's size is used the method "size()".
+On Collections, to check its size is used the method "size()".
 
 ## Using Loop Constructs 
 
-while structre: while(A) B, being A a boolean return condition, B will be ran only if condition A is true.
+while structure: while(A) B, being A a boolean return condition, B will be ran only if condition A is true.
 
 for structure: for(A;B;C) D, being A a initialization statement, ran before every statement.B is the conditional statement that needs a boolean return, ran after A. C is the update statement, but it's not ran before the first loop, it mean D runs before C. D is ran only if condition B is true.
 
@@ -311,14 +311,14 @@ On for structure, the update statement separates its statements by "," instead o
 
 ## Working with Methods and Encapsulation 
 
-modifiers(from most acess to least):
+modifiers(from most access to least):
 
 * public: any class has access to it.
 * protected: any class within the same package and child class from the protected member class can access it.
 * default or package-private: any class within the same package can access it.
 * private: only the member owner can access it.
 
-constructors does not have any return type.
+constructors do not have any return type.
 
 finals variables can only be set one time
 
@@ -372,7 +372,7 @@ Methods from interface are implicit "public".
 
 "final", "static" and any other access modifier besides "public" cannot be declared on an abstract method.
 
-if two different interfaces has the same static or default method(dispite de implementation), the class implementing both, must implement a new method default or static.
+if two different interfaces has the same static or default method(despite the implementation), the class implementing both, must implement a new method default or static.
 
 Concrete classes must implement all abstract classes from its parent.
 
@@ -382,14 +382,14 @@ When calling static methods, it uses the class implementation, which mean that t
 
 Attributes are always from reference.
 
-Overriden method rules:
+Overridden method rules:
 
 * methods must have the same name.
 * methods must have the same arguments.
 * methods must have the same return type or its covariants. 
-* methods must not resctrict more the access, but can change to a broader access modifier(if parent --> protected then child --> private is not allowed)(if parent --> protected then child --> public is allowed).
+* methods must not restrict more the access, but can change to a broader access modifier(if parent --> protected then child --> private is not allowed)(if parent --> protected then child --> public is allowed).
 * methods must not throw new or broader exception but can remove(if parent --> throws RuntimeException --> child throws Exception is not allowed)(if parent --> throws RuntimeException --> child does not throw nothing is allowed).
-* only inherited methods can be overriden.
+* only inherited methods can be overridden.
 * Constructors and private methods are not inherited, so they cannot be overridden.
 * Abstract methods must be overridden by the first concrete (non-abstract) subclass.
 * final methods cannot be overridden.
@@ -401,7 +401,7 @@ A class that defines a static method with the same signature as a static method 
 
 Interface variables are constant, it means they are implicitly public static and final.
 
-abstract methods can be overriden.
+abstract methods can be overridden.
 
 ## Handling Exceptions 
 
@@ -419,9 +419,9 @@ Important unchecked exceptions: NullPointerException, NegativeArraySizeException
 
 Important Error's: StackOverflowError, OutOfMemoryError
 
-Erros should never be used to catch.
+Errors should never be used to catch.
 
-The "catch" statements must always be orderer from least wide to most broader. 
+The "catch" statements must always be ordered from widest to broadest. 
 Ex:
 ```
 try {
@@ -438,7 +438,7 @@ The order of statements:
 
 The try statement must have try keyword, but it's not mandatory a catch or a finally, but it's necessary one of them at least.
 
-The finally block will always run, except if the program forcebly exits on try or catch.
+The finally block will always run, except if the program forcibly exits on try or catch.
 
 Thought the finally is the last block to run, on the following method, the finally exception is the one to be catch on method call:
 ```
@@ -453,7 +453,7 @@ public void fix() throws Exception {
 }
 ```
 
-Variables over consecutive catchs can have the same identifier.
+Variables over consecutive catches can have the same identifier.
 
 Variables from an inner catch cannot have the same identifier from the outer.
 
