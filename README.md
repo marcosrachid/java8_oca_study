@@ -287,6 +287,9 @@ Ways to declare simple matrix:
 * int[][] myIntArray = new int[3][3];
 * int[] myIntArray[] = new int[3][3];
 * int myIntArray[][] = new int[3][3];
+* int[][] myIntArray = new int[3][];
+* int[] myIntArray[] = new int[3][];
+* int myIntArray[][] = new int[3][];
 
 Arrays are objects, not primitives.
 
