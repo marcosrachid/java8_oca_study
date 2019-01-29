@@ -101,34 +101,75 @@ Possible numeric types declaration:
 * long v = 1234567l;
 * long v = 1234567L;
 
-implicit cast list:
+implicit cast list variable x value:
 
 Reference  |  Value
 -------------  |  -------------
 char  |  byte
 char  |  short
 char  |  int
+char  |  char
 byte  |  char
+byte  |  int(between -128 and 127)
 short  |  char
 short  |  byte
+short  |  int(between -32768 and 32767)
 int  |  char
 int  |  byte
 int  |  short
+int  |  int
 long  |  char
 long  |  byte
 long  |  short
 long  |  int
+long  |  long
 float  |  char
 float  |  byte
 float  |  short
 float  |  int
 float  |  long
+float  |  float
 double  |  char
 double  |  byte
 double  |  short
 double  |  int
 double  |  long
 double  |  float
+double  |  double
+Object  |  any class
+Created Object  |  covariants
+Created Object  |  Created Object
+
+implicit cast list variable x variable:
+
+Reference  |  Value
+-------------  |  -------------
+char  |  char
+byte  |  byte
+short  |  byte
+short  |  short
+int  |  char
+int  |  byte
+int  |  short
+int  |  int
+long  |  char
+long  |  byte
+long  |  short
+long  |  int
+long  |  long
+float  |  char
+float  |  byte
+float  |  short
+float  |  int
+float  |  long
+float  |  float
+double  |  char
+double  |  byte
+double  |  short
+double  |  int
+double  |  long
+double  |  float
+double  |  double
 Object  |  any class
 Created Object  |  covariants
 
