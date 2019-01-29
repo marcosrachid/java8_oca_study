@@ -161,6 +161,7 @@ double  |  float
 double  |  double
 Object  |  any class
 Created Object  |  covariants
+Created Object  |  Created Object
 
 Wrapper table:
 
