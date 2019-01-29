@@ -105,33 +105,22 @@ implicit cast list variable x value:
 
 Reference  |  Value
 -------------  |  -------------
-char  |  byte
-char  |  short
 char  |  int
 char  |  char
 byte  |  char
 byte  |  int(between -128 and 127)
 short  |  char
-short  |  byte
 short  |  int(between -32768 and 32767)
 int  |  char
-int  |  byte
-int  |  short
 int  |  int
 long  |  char
-long  |  byte
-long  |  short
 long  |  int
 long  |  long
 float  |  char
-float  |  byte
-float  |  short
 float  |  int
 float  |  long
 float  |  float
 double  |  char
-double  |  byte
-double  |  short
 double  |  int
 double  |  long
 double  |  float
