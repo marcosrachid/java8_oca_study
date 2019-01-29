@@ -105,6 +105,7 @@ implicit cast list variable x value:
 
 Reference  |  Value
 -------------  |  -------------
+boolean  |  boolean
 char  |  int
 char  |  char
 byte  |  char
@@ -133,6 +134,7 @@ implicit cast list variable x variable:
 
 Reference  |  Value
 -------------  |  -------------
+boolean  |  boolean
 char  |  char
 byte  |  byte
 short  |  byte
