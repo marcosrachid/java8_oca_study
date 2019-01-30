@@ -679,7 +679,6 @@ Set important methods:
 * clear: void
 * contains: boolean
 * containsAll: boolean
-* get: E
 * isEmpty: boolean
 * iterator: Iterator<E>
 * remove: E
